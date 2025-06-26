@@ -59,14 +59,16 @@ Let’s check the status of the repository:
 git status
 ```
 You’ll see something like:
+```
 On branch main
 
 No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
+```
 
 Congratulations — you now have Git configured and a project ready to go! In the next module, we’ll explore how to make your first commit.
-```
+
 If you’re ever unsure about what a Git command does, you can always check the help with:
 ```execute
 git help <command>
