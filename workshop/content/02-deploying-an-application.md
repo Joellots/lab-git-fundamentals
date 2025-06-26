@@ -64,7 +64,6 @@ On branch main
 No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
-```
 
 Congratulations — you now have Git configured and a project ready to go! In the next module, we’ll explore how to make your first commit.
 ```
@@ -76,7 +75,7 @@ Example:
 ```execute
 git help config
 ```
-```
+
 
 
 
