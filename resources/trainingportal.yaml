@@ -1,7 +1,7 @@
 apiVersion: training.educates.dev/v1beta1
 kind: TrainingPortal
 metadata:
-  name: lab-k8s-fundamentals
+  name: lab-git-fundamentals
 spec:
   portal:
     registration:
@@ -15,6 +15,6 @@ spec:
         reserved: 1
         initial: 0
   workshops:
-  - name: lab-k8s-fundamentals
+  - name: lab-git-fundamentals
     expires: 60m
     orphaned: 5m

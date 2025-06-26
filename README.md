@@ -1,7 +1,7 @@
-Lab - Kubernetes Fundamentals
+Lab - Git Fundamentals
 =============================
 
-This repository holds source files for a workshop on Kubernetes fundamentals.
+This repository holds source files for a workshop on Git fundamentals.
 
 This workshop borrows heavily from a similar
 [workshop](https://github.com/openshift-labs/lab-k8s-fundamentals) by the same

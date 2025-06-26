@@ -1,12 +1,12 @@
 apiVersion: training.educates.dev/v1beta1
 kind: Workshop
 metadata:
-  name: lab-k8s-fundamentals
+  name: lab-git-fundamentals
 spec:
-  title: Kubernetes Fundamentals
-  description: An interactive workshop on Kubernetes fundamentals.
+  title: Git Fundamentals
+  description: An interactive workshop on Git fundamentals.
   publish:
-    image: $(image_repository)/lab-k8s-fundamentals-files:$(workshop_version)
+    image: $(image_repository)/lab-git-fundamentals-files:$(workshop_version)
     files:
     - directory:
         path: .
@@ -17,7 +17,7 @@ spec:
   workshop:
     files:
     - image:
-        url: $(image_repository)/lab-k8s-fundamentals-files:$(workshop_version)
+        url: $(image_repository)/lab-git-fundamentals-files:$(workshop_version)
       includePaths:
       - /workshop/**
       - /templates/**

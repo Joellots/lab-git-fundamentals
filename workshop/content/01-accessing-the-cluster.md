@@ -1,25 +1,31 @@
 ---
-title: Accessing the Cluster
+title: Git Terminologies
 ---
 
-For the exercises you will be doing, you will be using the `kubectl` command line program to interact with Kubernetes. This is provided for you via the interactive terminal session accessible through the **Terminal** tab, here in the workshop environment. You do not need to install anything on your own computer. You will be doing everything here through your web browser. There is no need to login as you are already connected to the Kubernetes cluster you will be using.
+**Version Control System (VCS)**
+A tool that helps you track changes in your code over time. Think of it as a “save history” for your project that lets multiple people work together without overwriting each other’s work.
 
-The workshop environment also provides you with a web based view into the Kubernetes cluster. This is available through the **Console** tab of the workshop environment. This is included so you can visually see the results of what you do in the exercises, but the exercises do not depend on it.
+**Commit**
+A snapshot of your changes. Like hitting “save” in a video game—you can always come back to it. Each commit records what changed and why.
 
-Before continuing, verify that the `kubectl` command runs and the workshop environment is also functioning. To do this run:
+**Push**
+Sends your saved work (commits) from your computer to the shared online repository so others can see it. It’s like uploading photos to the cloud.
 
-```execute
-kubectl version
-```
+**Pull**
+Grabs the latest changes from the shared repository and applies them to your local project. Like syncing your phone with the latest cloud backup.
 
-Did you type the command in yourself? If you did, click on the command instead and you will find that it is executed for you. You can click on any similar command block in the workshop notes and it will be copied to the interactive terminal and run for you. Other action blocks may also be used in this workshop which will similarly perform the action described when clicked on.
+**SHA (Secure Hash Algorithm)**
+A unique ID (like a fingerprint) for each commit. It ensures every version of your project can be precisely identified and verified.
 
-When run, you should see output similar to:
+**Branch**
+A separate line of work within your project. Imagine copying your document to test a new idea—branches let you do that safely, without touching the main version.
 
-```
-Client Version: v1.32.2
-Kustomize Version: v5.5.0
-Server Version: v1.32.2
-```
+![terminologies](/workshop/content/terminologies.png)
 
-The version of Kubernetes being used may be different to the version shown here.
+
+*Most popular Git solutions*
+Almost every company is now powered by software in one way or another. There are multiple projects handled by many developers in an organization, and they all need a means to track, upload, and receive changes to the code base. Effective repository management services are the key to fast and efficient software development. The most popular ones based on Git are ![GitHub](https://about.gitlab.com/?ref=kodekloud.com), ![Bitbucket](https://bitbucket.org/?ref=kodekloud.com), and ![GitLab](https://about.gitlab.com/?ref=kodekloud.com).
+
+![git-solutions](/workshop/content/git-solutions.png)
+
+> Here is a basic ![Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf?ref=kodekloud.com) you would love to have.

@@ -1,38 +1,83 @@
+
 ---
-title: Deploying an Application
+title: Getting Started – Git in Your Environment
 ---
 
-Now you have checked your access to the Kubernetes cluster is working, we are going to immediately jump in and deploy a complete application, consisting of a front end web application implementing a blog site, along with a PostgreSQL database for storing the blog posts.
+Now that you’ve been introduced to Git and its core concepts, let’s take the first practical step by getting comfortable with the Git environment.
 
-This is to show you how quickly you can deploy a complete application to Kubernetes if you already have the configuration. Once the complete application has been deployed, we will delete the front end web application component, and deploy it again in steps so you can see how it fits together and how it uses Kubernetes.
+You’re working in a web terminal that already has Git installed. So, instead of installing Git, let’s focus on verifying the installation and checking some basic configuration.
 
-The first part of the application we want to deploy is the PostgreSQL database. The set of resource files for deploying this can be found in the `database` directory.
-
-```execute
-ls -las database/
-```
-
-Each file in the directory contains a different resource definition which go together to make up the deployment for the application component.
-
-Rather than try and dig into each file to work out what it defines, you can have Kubernetes tell you what resources it would create when the directory of resources is processed. To do this, run:
+First, confirm that Git is available:
 
 ```execute
-kubectl apply -f database/ --dry-run=client
+git --version
 ```
-
-This should output:
+You should see an output like:
 
 ```
-secret/blog-credentials created (dry run)
-service/blog-db created (dry run)
-persistentvolumeclaim/blog-database created (dry run)
-deployment.apps/blog-db created (dry run)
+git version 2.39.3
 ```
+This confirms that Git is installed and ready to use in your environment.
 
-The `kubectl apply` command in this case is what is used to create resources from a configuration file, or set of files contained in a directory. We used the `--dry-run=client` option, which tells us what objects would be created without creating any of the objects in the cluster. The `--dry-run` option also validates the resource definitions and will warn you if they contain errors.
+### Configure Git (One-time Setup) ###
+Before making your first commit, it’s best to tell Git who you are. Git includes your name and email address in each commit you make. This helps with collaboration and tracking history.
 
-If you are ever uncertain about what a command does, or what options it accepts, you can run it with the `--help` option.
+Run the following to set up your Git identity:
+```execute
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+To check your configuration settings, use:
+```
+git config --list
+```
+You’ll see something like:
+```
+user.name=Your Name
+user.email=you@example.com
+```
+> The `--global` flag means these settings will apply to all projects you work on in this environment. You can override them for individual projects later if needed.
+
+### Create Your First Git Project ###
+Let’s now create a simple project folder that you can start tracking with Git.
 
 ```execute
-kubectl apply --help
+mkdir catgram
+cd catgram
 ```
+Initialize an empty Git repository in this folder:
+```execute
+git init
+```
+You should see:
+```
+Initialized empty Git repository in /root/catgram/.git/
+```
+This means Git is now tracking this folder.
+Let’s check the status of the repository:
+```execute
+git status
+```
+You’ll see something like:
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+```
+
+Congratulations — you now have Git configured and a project ready to go! In the next module, we’ll explore how to make your first commit.
+```
+If you’re ever unsure about what a Git command does, you can always check the help with:
+```execute
+git help <command>
+```
+Example:
+```execute
+git help config
+```
+```
+
+
+
+
